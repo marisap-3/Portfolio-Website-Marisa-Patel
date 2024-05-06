@@ -1,0 +1,929 @@
+/*-----------------------------------------------------------------------------BASIC STYLING----------------------------------------------------------------------------*/
+
+/* Taken from Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+  /* Formating: Adding font, smooth scrolling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins',sans-serif;
+}
+
+/* Adding a scrollbar */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color);
+    border-radius: 0.5rem;
+}
+
+/*Background colours*/
+:root {
+    --background-color: #232222;
+    --second-background-color: #302d2d;
+    --text-color: #fff;
+    --color: #a35c7d;
+}
+
+/*Font sizing*/
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+/*Background colour in the body*/
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+/*Adding padding to sections*/
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+/*Header from index.html code*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--background-color);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    z-index: 100;
+}
+
+/* For sticky navigation bar */
+.header.sticky {
+    border-bottom: 0.1rem solid var(--background-color)
+}
+
+/*Navigation bar from index.html code*/
+.nav-bar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: 0.3s;
+}
+
+/*Changing the color when hovering over navigation link in the header, and when the link is active*/
+.nav-bar a:hover,
+.nav-bar a.active {
+    color: var(--color);
+}
+
+/*Menu icon from Boxicon, being used only when in mobile view*/
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+/*------------------------------------------------------------------------------HOME SECTION----------------------------------------------------------------------------*/
+/*Adjusting alignment of Home section*/
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Changing width of portrait image in Home section, adding float animation*/
+.portrait-img img {
+    width: 35vw;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Float animation for portrait image */
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1.4rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+/*Adjusting size of text for h3 in Home content*/
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    animation: f;
+}
+
+/*Margin for h3*/
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+/*Formatting span*/
+.home-content span {
+    color: var(--color);
+}
+
+/*Adjusting size of text for h1 in Home content*/
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/*Font size for paragraph text in Home content*/
+.home-content p {
+    font-size: 1.6rem;
+}
+
+/*Formatting the social media contact links*/
+.social-media-contacts a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--color);
+    margin: 2.8rem 1.5rem 2.8rem 0;
+    transition: .5s ease;
+}
+
+/*Hovering over contacts*/
+.social-media-contacts a:hover {
+    background: var(--color);
+    color: var(--second-background-color);
+    box-shadow: 0 0 1rem var(--color);
+}
+
+/*Formatting buttons*/
+.button {
+    display: inline-block;
+    padding: 1rem 2.3rem;
+    background: var(--color);
+    box-shadow: 0 0 1rem var(--color);
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    color: var(--background-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+/*Hovering over buttons*/
+.button:hover {
+    box-shadow: none;
+}
+
+/*----------------------------------------------------------------------------SKILLS SECTION----------------------------------------------------------------------------*/
+/* Background colour */
+.skills {
+    background-color: var(--second-background-color);
+}
+
+/*Formatting buttons*/
+.skills-top-portion .button {
+    display: inline-block;
+    padding: 1rem 2.3rem;
+    background: var(--color);
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--color);
+    font-size: 1.6rem;
+    color: var(--background-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    margin-bottom: 3rem;
+}
+
+/*Hovering over buttons*/
+.skills-top-portion .button:hover {
+    box-shadow: none;
+}
+
+
+/* Alignment of top portion */
+.skills-top-portion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adjusting alignment of text in Skills top portion */
+.skills-top-portion {
+    text-align: center;
+}
+
+/* Adjusting size of text for h2 in Skills top portion */
+.skills-top-portion h2 {
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+
+/* Margin for h2 */
+.skills-top-portion h2:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+/*Formatting span*/
+.skills-top-portion span {
+    color: var(--color);
+}
+
+/* Font size for paragraph text in Skills top portion */
+.skills-top-portion p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+/* Formatting span */
+.skills-top-portion .heading span {
+    color: var(--color);
+}
+
+/* Alignment and size of heading */
+.skills-top-portion .heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+/* Margin */
+.skills h2 {
+    margin-bottom: 1rem;
+}
+
+/* Container */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Box */
+.skills-container .skills-box {
+    flex: 1 1 25rem;
+    background: var(--background-color);
+    padding: 2rem 2rem 2rem;
+    border-radius: 3rem;
+    text-align: center;
+    border: .2rem solid var(--second-background-color);
+    transition: 0.5s ease;
+}
+
+/* Hovering over the boxes */
+.skills-container .skills-box:hover {
+    border-color: var(--color);
+    transform: scale(1.03)
+}
+
+/* Boxicons */
+.skills-box i {
+    font-size: 7rem;
+    color: var(--color);
+}
+
+/* h3 font size in box */
+.skills-box h3 {
+    font-size: 2.7rem;
+}
+
+/* Margin and font size of p in box */
+.skills-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 1rem;
+}
+
+/* Skills icon */
+.skills-icon {
+    cursor: default;
+    height: 2rem;
+    vertical-align: text-top;
+    margin-right: 0.4rem; /* Add spacing between icon and text */
+}
+
+/*--------------------------------------------------------------------------EXPERIENCE SECTION--------------------------------------------------------------------------*/
+/* Formatting span */
+.heading span {
+    color: var(--color);
+}
+
+/* Alignment and size of heading */
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+/* Margin */
+.experience h2 {
+    margin-bottom: 5rem;
+}
+
+/* Container */
+.experiences-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    /*grid-template-columns: repeat(2, 1fr);*/
+}
+
+/* Box */
+.experiences-container .experiences-box {
+    flex: 1 1 25rem;
+    background: var(--second-background-color);
+    padding: 2rem 2rem 4rem;
+    border-radius: 3rem;
+    text-align: center;
+    border: .2rem solid var(--background-color);
+    transition: .5s ease;
+}
+
+/* Hovering over the boxes */
+.experiences-container .experiences-box:hover {
+    border-color: var(--color);
+    transform: scale(1.03)
+}
+
+/* Boxicons */
+.experiences-box i {
+    font-size: 7rem;
+    color: var(--color);
+}
+
+/* h3 font size in box */
+.experiences-box h3 {
+    font-size: 2.7rem;
+}
+
+/* Margin and font size of p in box */
+.experiences-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+/*Formatting buttons*/
+.experiences-button {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    padding: .7rem 2rem;
+    background: var(--color);
+    box-shadow: 0 0 1rem var(--color);
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    color: var(--background-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+/*Hovering over buttons*/
+.experiences-button:hover {
+    box-shadow: none;
+}
+
+/*Hovering over buttons and right arrow icon*/
+.experiences-button:hover i{
+    box-shadow: none;
+    transform: translateX(.3rem);
+}
+/*Formatting right arrow icon in button*/
+.experiences-button i{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--background-color);
+    transition: .5s ease;
+    margin-left: .2rem;
+}
+
+.experiences__modal {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0rem 1rem;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5 ease;
+}
+
+.active-modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Blur effect for experiences section */
+.experience.blur .heading,
+.experience.blur .experiences-box {
+    filter: blur(5px);
+}
+
+/* Restore default styles for modal when body has modal-open class */
+.modal-open .experiences__modal {
+    pointer-events: auto;
+}
+
+.experiences__modal-content {
+    position: relative;
+    background-color: var(--second-background-color);
+    padding: 7rem;
+    border-radius: 1rem;
+}
+
+.experiences__modal-experience {
+    display: flex;
+}
+
+.experiences__modal-experience p{
+    font-size: 1.6rem;
+    margin-bottom: .7rem;
+}
+
+.experiences__modal-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: .1rem;
+    color: var(--color);
+}
+
+.experiences__modal-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: .1rem;
+    color: var(--color);
+}
+
+.experiences__modal-dateTitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: var(--color);
+}
+
+.experiences__modal-close {
+    position: absolute;
+    cursor: pointer;
+    color: var(--color);
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.5rem;
+}
+
+.experiences__modal-icon {
+    color: var(--text-color);
+    margin-right: 0.25rem;
+    font-size: 2rem;
+}
+
+/*---------------------------------------------------------------------------PROJECTS SECTION---------------------------------------------------------------------------*/
+/* Background colour */
+.projects {
+    background-color: var(--second-background-color);
+}
+
+/* Margin */
+.projects h2 {
+    margin-bottom: 5rem;
+}
+
+/* Container */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    min-height: 60rem;
+}
+
+/* Project boxes */
+.projects-container .projects-box {
+    position: relative;
+    flex: 1 1 20rem;
+    background: var(--background-color);
+    padding: 2rem 2rem 2rem;
+    border-radius: 3rem; 
+    text-align: center; 
+    border: .2rem solid var(--background-color);
+    transition: border-color .5s ease, transform .5s ease;
+}
+
+/* Project images */
+.projects-box img {
+    height: 20rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem; 
+    filter: grayscale(100%);
+}
+
+/*h3 font in box*/
+.projects-box h3 {
+    font-size: 1.8rem; 
+    color: var(--color);
+}
+
+/*p margin and font size */
+.projects-box p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Button */
+.projects-button {
+    position: absolute;
+    bottom: 8.5rem; 
+    right: 1.9rem; 
+    width: 4rem; 
+    height: 4rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: var(--color);
+    box-shadow: 0 0 1rem var(--color);
+    border-radius: 50%;
+    transition: .5s ease;
+}
+
+/* Hover effects */
+.projects-container .projects-box:hover {
+    border-color: var(--color);
+    transform: scale(1.03);
+}
+
+/* Hovering over button */
+.projects-button:hover {
+    box-shadow: none;
+}
+
+/*Hovering over buttons and right arrow icon*/
+.projects-button:hover i{
+    box-shadow: none;
+    transform: translateX(.3rem);
+}
+
+/*Formatting right arrow icon in button*/
+.projects-button i{
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--background-color);
+    transition: .5s ease;
+}
+
+.projects__modal {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0rem 1rem;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5 ease;
+}
+
+.active-modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Blur effect for projects section */
+.projects.blur .heading,
+.projects.blur .projects-box {
+    filter: blur(5px);
+}
+
+/* Restore default styles for modal when body has modal-open class */
+.modal-open .projects__modal {
+    pointer-events: auto;
+}
+
+.projects__modal-content {
+    position: relative;
+    background-color: var(--background-color);
+    padding: 7rem;
+    border-radius: 1rem;
+}
+
+.projects__modal-project {
+    display: flex;
+}
+
+.projects__modal-project p{
+    font-size: 1.6rem;
+    margin-bottom: .7rem;
+}
+
+.projects__modal-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: .1rem;
+    color: var(--color);
+}
+
+.projects__modal-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: .1rem;
+    color: var(--color);
+}
+
+.projects__modal-dateTitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color);
+    margin-bottom: .5rem;
+}
+
+/*Formatting GitHub button*/
+.github_button {
+    display: inline-block;
+    padding: .2rem 2rem;
+    background: var(--color);
+    box-shadow: 0 0 1rem var(--color);
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    color: var(--background-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    margin-bottom: 2rem;
+}
+
+/*Hovering over GitHub button*/
+.github_button:hover {
+    box-shadow: none;
+}
+
+.projects__modal-video {
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.projects__modal-picture {
+    width: 800px; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.projects__modal-close {
+    position: absolute;
+    cursor: pointer;
+    color: var(--color);
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.5rem;
+}
+
+.projects__modal-icon {
+    color: var(--text-color);
+    margin-right: 0.25rem;
+    font-size: 2rem;
+}
+
+/*----------------------------------------------------------------------------FOOTER SECTION----------------------------------------------------------------------------*/
+/* Alignment */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--background-color);
+    height: 10rem;
+}
+
+/*Formatting buttons*/
+.footer_button {
+    display: inline-block;
+    padding: 0.7rem 2rem;
+    background: var(--color);
+    box-shadow: 0 0 1rem var(--color);
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    color: var(--background-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+/*Hovering over buttons*/
+.footer_button:hover {
+    box-shadow: none;
+}
+
+/* Footer icon formatting */
+.footer-icon-up a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    width: 4rem;
+    height: 4rem;
+    background: var(--color);
+    transition: .5s ease;
+    border: .2rem solid var(--color);
+    border-radius: 50%;
+}
+
+/* Hovering over footer up icon */
+.footer-icon-up a:hover {
+    box-shadow: 0 0 1rem var(--color);
+}
+
+/* Footer icon formatting */
+.footer-icon-up a i {
+    font-size: 2.5rem;
+    color: var(--background-color);
+}
+
+/*Hovering over button and up arrow icon*/
+.footer-icon-up:hover i{
+    box-shadow: none;
+    transform: translateY(-0.3rem);
+}
+
+/*Formatting the social media contact links in the footer*/
+.social-media-contacts-footer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--color);
+    margin: 0.2rem 1.5rem 0.2rem 0;
+    transition: .5s ease;
+}
+
+/*Hovering over contacts in the footer*/
+.social-media-contacts-footer a:hover {
+    background: var(--color);
+    color: var(--background-color);
+    box-shadow: 0 0 1rem var(--color);
+}
+
+/*-------------------------------------------------------------------------BREAKPOINTS IN MEDIA-------------------------------------------------------------------------*/
+/* 1200px */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+    .footer {
+        height: 10rem;
+    }
+}
+
+/* 991px, adjusting margins and padding */
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .experience {
+        padding-bottom: 7.5rem;
+    }
+    .projects {
+        padding-bottom: 7.5rem;
+    }
+    .footer {
+        padding: 2rem 3%;
+        height: 10rem;
+    }
+    .experiences-container,
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-bottom: 5rem;
+    }
+}
+
+/* Displaying menu icon at width 768px, adding drop down menu, adjusting sizes and margins for 768px */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    .nav-bar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--background-color);
+        border-top: 0.1rem solid var(#232222);
+        box-shadow: 0 0.5rem 1rem var(--background-color);
+        display: none;
+    }
+    .nav-bar.active {
+        display: block;
+    }
+    .nav-bar a {
+        display: block;
+        margin: 3rem 0;
+        font-size: 1.7rem;
+    }
+    .home {
+        flex-direction: column;
+    }
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    .portrait-img img {
+        width: 60vw;
+        margin-top: 4rem;
+    }
+    .skills {
+        flex-direction: column-reverse;
+    }
+    .experience h2 {
+        margin-bottom: 3rem;
+    }
+    .experiences-container {
+        grid-template-columns: 1fr;
+    }
+    .projects h2 {
+        margin-bottom: 3rem;
+    }
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    .footer {
+        height: 10rem;
+    }
+}
+
+/* 617px, adjusting project containers */
+@media (max-width: 617px) {
+    .experiences-container,
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    .experiences-container,
+    .projects-container {
+        gap: 1rem;
+    }
+    .projects-container {
+        margin-bottom: 3rem;
+    }
+    .footer {
+        height: 10rem;
+    }
+}
+
+/* 480px, adjusting project containers */
+@media (max-width: 480px) {
+    .projects-container {
+        margin-bottom: 3rem;
+    }
+    .footer {
+        height: 10rem;
+    }
+}
