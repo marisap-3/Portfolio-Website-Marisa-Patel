@@ -305,12 +305,16 @@ section {
 /* h3 font size in box */
 .skills-box h3 {
     font-size: 2.7rem;
+    text-align: center;
 }
 
 /* Margin and font size of p in box */
 .skills-box p {
     font-size: 1.6rem;
     margin: 1rem 0 1rem;
+    text-align: left;
+    margin-left: 10rem;
+    margin-right: 8rem;
 }
 
 /* Skills icon */
@@ -318,7 +322,7 @@ section {
     cursor: default;
     height: 2rem;
     vertical-align: text-top;
-    margin-right: 0.4rem; /* Add spacing between icon and text */
+    margin-right: 0.4rem;
 }
 
 /*--------------------------------------------------------------------------EXPERIENCE SECTION--------------------------------------------------------------------------*/
@@ -449,10 +453,46 @@ section {
     pointer-events: auto;
 }
 
+
+
+
+
+.experiences-top-section {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: var(--second-background-color);
+    margin-bottom: 4rem;
+    gap: 2rem;
+}
+
+
+
+/*Changing width of experiences image, adding float animation*/
+.experiences-img img {
+    width: 10vw;
+    border-radius: 1.5rem;
+    animation: float_exp 3s ease-in-out infinite;
+}
+
+/* Float animation for experiences images */
+@keyframes float_exp {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-.35rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
 .experiences__modal-content {
     position: relative;
     background-color: var(--second-background-color);
-    padding: 7rem;
+    padding: 5rem;
     border-radius: 1rem;
 }
 
@@ -461,26 +501,26 @@ section {
 }
 
 .experiences__modal-experience p{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: .7rem;
 }
 
 .experiences__modal-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    margin-bottom: .1rem;
+    margin-bottom: .5rem;
     color: var(--color);
 }
 
 .experiences__modal-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: .1rem;
     color: var(--color);
 }
 
 .experiences__modal-dateTitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 500;
     margin-bottom: 2rem;
     color: var(--color);
@@ -492,7 +532,7 @@ section {
     color: var(--color);
     top: 1rem;
     right: 1rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .experiences__modal-icon {
@@ -630,6 +670,66 @@ section {
     pointer-events: auto;
 }
 
+
+
+
+
+
+
+
+
+.projects-top-section {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: var(--background-color);
+    margin-bottom: 4rem;
+    gap: 2rem;
+}
+
+
+
+/*Changing width of projects image, adding float animation*/
+.projects-img img {
+    width: 10vw;
+    border-radius: 1.5rem;
+    animation: float_proj 3s ease-in-out infinite;
+}
+
+/* Float animation for projects images */
+@keyframes float_proj {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-.35rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .projects__modal-content {
     position: relative;
     background-color: var(--background-color);
@@ -642,35 +742,35 @@ section {
 }
 
 .projects__modal-project p{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: .7rem;
 }
 
 .projects__modal-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    margin-bottom: .1rem;
+    margin-bottom: .5rem;
     color: var(--color);
 }
 
 .projects__modal-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: .1rem;
     color: var(--color);
 }
 
 .projects__modal-dateTitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 500;
     color: var(--color);
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 /*Formatting GitHub button*/
 .github_button {
     display: inline-block;
-    padding: .2rem 2rem;
+    padding: .4rem 2rem;
     background: var(--color);
     box-shadow: 0 0 1rem var(--color);
     border-radius: 2rem;
@@ -710,7 +810,7 @@ section {
     color: var(--color);
     top: 1rem;
     right: 1rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .projects__modal-icon {
@@ -723,13 +823,16 @@ section {
 /* Alignment */
 .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     flex-wrap: wrap;
+    height: 80px;
     padding: 2rem 9%;
     background: var(--background-color);
-    height: 10rem;
 }
+
+
+
 
 /*Formatting buttons*/
 .footer_button {

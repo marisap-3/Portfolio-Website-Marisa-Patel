@@ -90,3 +90,4 @@ function closeModal(modal) {
     modal.classList.remove('active-modal');
     document.body.classList.remove('modal-open');
 }
+
