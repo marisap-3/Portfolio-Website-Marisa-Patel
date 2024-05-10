@@ -272,10 +272,11 @@ section {
 
 /* Container */
 .skills-container {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
@@ -283,7 +284,7 @@ section {
 .skills-container .skills-box {
     flex: 1 1 25rem;
     background: var(--background-color);
-    padding: 2rem 2rem 2rem;
+    padding: 2rem 1rem 2rem;
     border-radius: 3rem;
     text-align: center;
     border: .2rem solid var(--second-background-color);
@@ -313,8 +314,8 @@ section {
     font-size: 1.6rem;
     margin: 1rem 0 1rem;
     text-align: left;
-    margin-left: 10rem;
-    margin-right: 8rem;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
 }
 
 /* Skills icon */
