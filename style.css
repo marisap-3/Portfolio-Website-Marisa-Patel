@@ -506,6 +506,25 @@ section {
     margin-bottom: .7rem;
 }
 
+.experiences__modal-experience span2{
+    font-size: 1.5rem;
+    margin-bottom: .7rem;
+    font-weight: 700;
+}
+
+
+.italic-text {
+    display: inline-block;
+    transform: skewX(-10deg);
+    font-style: normal;
+}
+
+
+.experiences__modal-experience span3{
+    font-size: 1.5rem;
+    color: var(--color);
+}
+
 .experiences__modal-title {
     font-size: 2.5rem;
     font-weight: 800;
